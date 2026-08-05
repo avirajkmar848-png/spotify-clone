@@ -1,0 +1,55 @@
+.border{
+    border:2px solid red;
+    margin:3px;
+}
+
+.flex{
+    display:flex;
+}
+.justify-center{
+    justify-content: center;
+}
+.items-center{
+    align-items: center;
+}
+.bg-black{
+    background-color: black;
+    color: white;
+}
+.invert{
+   filter: invert(1);
+}
+.bg-grey{
+    background-color:#121212;
+}
+.rounded{
+    border-radius:7px;
+}
+.m-1{
+    margin: 5px;
+}
+.p-1{
+    padding:10px;
+}
+
+/* Width of the scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track (the background area of the scrollbar) */
+::-webkit-scrollbar-track {
+    background: #121212; /* Deep dark black/grey */
+}
+
+/* Handle (the draggable part) */
+::-webkit-scrollbar-thumb {
+    background: #555; /* Subtle grey */
+    border-radius: 6px; /* Smooth rounded edges */
+    border: 3px solid #121212; /* Creates padding around the handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #1db954; /* Optional: Spotify Green on hover! */
+}
