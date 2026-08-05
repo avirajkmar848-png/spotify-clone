@@ -21,7 +21,7 @@ function formatTime(seconds) {
 
 async function getsongs(folder) {
     currFolder = folder;
-    let a = await fetch(`http://127.0.0.1:5500/${folder}/`)
+    let a = await fetch(`${folder}/`)
     let response = await a.text();
     let div = document.createElement("div")
     div.innerHTML = response;
@@ -67,7 +67,7 @@ async function getsongs(folder) {
 }
 const playMusic = (track, pause = false) => {
 
-    currentsong.src = `/${currFolder}/` + track
+    currentsong.src = `${currFolder}/` + track
     if (!pause) {
         currentsong.play()
         play.src = "Images/pause.svg"
@@ -78,7 +78,7 @@ const playMusic = (track, pause = false) => {
 
 async function displayAlbums() {
 
-    let a = await fetch(`http://127.0.0.1:5500/songs/`);
+    let a = await fetch(`songs/`);
     let response = await a.text();
 
     let div = document.createElement("div");
@@ -97,7 +97,7 @@ async function displayAlbums() {
 
             let folder = new URL(element.href).pathname.split("/").filter(Boolean).at(-1);
 
-            let res = await fetch(`http://127.0.0.1:5500/songs/${folder}/info.json`);
+            let res = await fetch(`songs/${folder}/info.json`);
             if (!res.ok) continue;
 
             let response = await res.json();
@@ -107,7 +107,7 @@ async function displayAlbums() {
                 <div class="play">
                     <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 64 64'><circle cx='32' cy='32' r='32' fill='%2322c55e'/><path fill='%23000' d='M42.4 32.5L23 44.38L22 45V20l1 .62z'/></svg>">
                 </div>
-                <img src="/songs/${folder}/cover.jpg" alt="">
+                <img src="songs/${folder}/cover.jpg" alt="">
                 <h2>${response.title}</h2>
                 <p>${response.description}</p>
             </div>`;
