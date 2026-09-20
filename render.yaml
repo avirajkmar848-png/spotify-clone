@@ -1,0 +1,30 @@
+# Render Blueprint — https://render.com/docs/blueprint-spec
+#
+# Deploys this repository as a Render static site. Render runs the build
+# command, then publishes the repository root (index.html, style.css, script.js,
+# Images/, songs/, ...) to its global CDN.
+#
+# The build step regenerates songs.json from whatever is in songs/, so adding a
+# track is just: drop the .mp3 into songs/<album>/ and push.
+# The `|| echo` fallback keeps the deploy working from the committed songs.json
+# if the build environment has no Node runtime available.
+
+services:
+  - type: web
+    name: spotify-clone
+    runtime: static
+    branch: master
+    autoDeployTrigger: commit
+    buildCommand: node scripts/generate-manifest.js || echo "Using the committed songs.json"
+    staticPublishPath: .
+    headers:
+      # The manifest must never be cached, otherwise new albums do not show up.
+      - path: /songs.json
+        name: Cache-Control
+        value: no-cache
+      - path: /Images/*
+        name: Cache-Control
+        value: public, max-age=86400
+      - path: /songs/*
+        name: Cache-Control
+        value: public, max-age=86400

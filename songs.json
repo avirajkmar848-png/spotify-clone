@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-09-20T11:42:16.243Z",
+  "albums": [
+    {
+      "folder": "Ncs",
+      "title": "Karan Aujla Hits",
+      "description": "Songs for you",
+      "cover": "songs/Ncs/cover.jpg",
+      "songs": [
+        {
+          "title": "52 Bars Four You",
+          "path": "songs/Ncs/52 Bars Four You 128 Kbps - Copy.mp3"
+        },
+        {
+          "title": "Legacy",
+          "path": "songs/Ncs/Legacy.mp3"
+        },
+        {
+          "title": "Naam Chale Vikram Sarkar",
+          "path": "songs/Ncs/Naam Chale Vikram Sarkar 128 Kbps - Copy.mp3"
+        },
+        {
+          "title": "Not Guilty Dhanda Nyoliwala",
+          "path": "songs/Ncs/Not Guilty Dhanda Nyoliwala 128 Kbps.mp3"
+        },
+        {
+          "title": "Tension",
+          "path": "songs/Ncs/Tension(KoshalWorld.Com) - Copy.mp3"
+        },
+        {
+          "title": "Winning Speech Karan Aujla",
+          "path": "songs/Ncs/Winning Speech Karan Aujla 128 Kbps - Copy.mp3"
+        }
+      ]
+    },
+    {
+      "folder": "cs",
+      "title": "Love Hits",
+      "description": "True loveee",
+      "cover": "songs/cs/cover.jpg",
+      "songs": [
+        {
+          "title": "52 Bars Four You",
+          "path": "songs/cs/52 Bars Four You 128 Kbps - Copy.mp3"
+        },
+        {
+          "title": "Legacy",
+          "path": "songs/cs/Legacy.mp3"
+        }
+      ]
+    }
+  ]
+}
